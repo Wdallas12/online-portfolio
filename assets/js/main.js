@@ -111,7 +111,7 @@
 				// Set src.
 					if (event.target instanceof HTMLVideoElement) {
 						$modal.find('.inner video').remove();
-						var vid = event.target.cloneNode(true);
+						const vid = event.target.cloneNode(true);
 						vid.style.width = '100%';
 						vid.style.height = '50%';
 						$modal.find(.'inner').append(vid);
