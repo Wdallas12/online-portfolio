@@ -112,8 +112,8 @@
 					if (event.target instanceof HTMLVideoElement) {
 						$modal.find('.inner video').remove();
 						var vid = event.target.cloneNode(true);
-						vid.style.width = '75%';
-						vid.style.height = 'auto';
+						vid.style.width = '500px';
+						vid.style.height = '500px';
 						$modal.find(.'inner').append(vid);
 						$modal.addClass('loaded');
 					} else {
