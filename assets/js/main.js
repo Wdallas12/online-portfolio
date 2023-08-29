@@ -90,7 +90,7 @@
 					$gallery = $a.parents('.gallery'),
 					$modal = $gallery.children('.modal'),
 					$modalImg = $modal.find('img'),
-					$modalVid = $modal.find('video'),
+					
 					href = $a.attr('href');
 
 				// Not an image? Bail.
@@ -109,7 +109,7 @@
 					$modal[0]._locked = true;
 
 				// Set src.
-					if (event.target instanceof HTMLVideoElement) {
+					/*if (event.target instanceof HTMLVideoElement) {
 						$modal.find('.inner video').remove();
 						const vid = event.target.cloneNode(true);
 						vid.style.width = '100%';
@@ -118,8 +118,8 @@
 						$modal.addClass('loaded');
 					} else {
 						$modalImg.attr('src', href);
-					}
-					
+					}*/
+					$modalImg.attr('src', href);
 
 				// Set visible.
 					$modal.addClass('visible');
