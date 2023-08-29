@@ -109,8 +109,17 @@
 					$modal[0]._locked = true;
 
 				// Set src.
-					$modalImg.attr('src', href);
-					$modalVid.attr('src', href);
+					if (event.target instanceof HTMLVideoElement) {
+						$modal.find('.inner video').remove();
+						var vid = event.target.cloneNode(true);
+						vid.style.width = '75%';
+						vid.style.height = 'auto';
+						$modal.find(.'inner').append(vid);
+						$modal.addClass('loaded');
+					} else {
+						$modalImg.attr('src', href);
+					}
+					
 
 				// Set visible.
 					$modal.addClass('visible');
